@@ -12,12 +12,103 @@
     <base href="./" />
   </head>
   <body>
-    <h1></h1>
-   
-    <hr />
-    <small>
-      <a href="citations.html">Citations</a>
-    </small>
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="brand">
+          <div class="crest" aria-hidden="true">
+            <!-- If you add or update the crest image, place it in the images/ folder.
+                 We include the provided LOGO.png below so it shows in the header. -->
+            <img
+              src="images/LOGO.png"
+              alt="Athletico Paranaense crest"
+              class="crest-img"
+            />
+          </div>
+          <div>
+            <h1 class="team-name">Club Athletico Paranaense</h1>
+            <p class="sub">Founded: 1924 — Curitiba, Brazil</p>
+          </div>
+        </div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <a href="#about">About</a>
+          <a href="#stadium">Stadium</a>
+          <a href="#squad">Squad</a>
+          <a href="#colors">Colors</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container hero-inner">
+          <h2 class="hero-title">Athletico Paranaense</h2>
+          <p class="hero-lead">
+            A proud club from Curitiba playing in black and red — paixão
+            rubro-negra.
+          </p>
+        </div>
+      </section>
+
+      <div class="container grid">
+        <section id="about" class="card">
+          <h3>About</h3>
+          <p>
+            Athletico Paranaense (often called Athletico-PR) is a Brazilian club
+            known for its passionate fans and distinctive red-and-black colors.
+            
+          </p>
+        </section>
+
+        <section id="stadium" class="card">
+          <h3>Stadium</h3>
+          <p>
+            Home stadium: Arena da Baixada, located in Curitiba. Capacity of 42,372
+          </p>
+        </section>
+
+        <section id="squad" class="card">
+          <h3>Squad (example)</h3>
+          <p>Click a player to reveal a short bio.</p>
+          <ul class="squad-list">
+            <li>
+              <button class="player-btn">Player 1</button>
+              <div class="player-bio">Position: Defender — Add notes here.</div>
+            </li>
+            <li>
+              <button class="player-btn">Player 2</button>
+              <div class="player-bio">
+                Position: Midfielder — Add notes here.
+              </div>
+            </li>
+            <li>
+              <button class="player-btn">Player 3</button>
+              <div class="player-bio">Position: Forward — Add notes here.</div>
+            </li>
+          </ul>
+        </section>
+
+        <aside id="colors" class="card colors-card">
+          <h3>Team Colors</h3>
+          <div class="colors">
+            <div class="swatch swatch-red"><span>#E10600</span></div>
+            <div class="swatch swatch-black"><span>#000000</span></div>
+          </div>
+          <p class="small">
+            Use these colors for posters and designs to keep the brand strong.
+          </p>
+        </aside>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          &copy; <span id="year"></span> Athletico Paranaense — content
+          placeholder.
+        </p>
+        <small><a href="citations.html">Citations</a></small>
+      </div>
+    </footer>
   </body>
   <script src="script.js"></script>
 </html>
