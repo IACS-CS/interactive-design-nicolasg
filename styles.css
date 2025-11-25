@@ -83,7 +83,6 @@ body {
   color: var(--red);
 }
 
-
 .hero {
   padding: 3rem 0;
   background-image: linear-gradient(
@@ -173,13 +172,87 @@ body {
   border-radius: 6px;
   cursor: pointer;
 }
+/* player-bio uses a max-height transition for smooth expand/collapse */
 .player-bio {
-  display: none;
+  max-height: 0; /* collapsed */
+  overflow: hidden;
   margin-top: 0.4rem;
-  padding: 0.5rem;
+  padding: 0 0.5rem; /* horizontal padding kept; vertical handled by max-height */
   border-left: 3px solid var(--red);
   background: rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  transition: max-height 320ms ease, opacity 220ms ease, padding 220ms ease;
+  opacity: 0;
+}
+
+/* When open, allow content to expand. Use a large enough max-height to fit content. */
+.player-bio.open {
+  /* cap the expanded area so long lists scroll instead of growing the page */
+  max-height: 360px;
+  padding: 0.5rem;
+  opacity: 1;
+  overflow: auto; /* allow scrolling when content exceeds max-height */
+  -webkit-overflow-scrolling: touch; /* smoother scrolling on mobile */
+}
+
+/* Make the goalkeeper button more prominent and the combined bios look tidy */
+.goalkeeper-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  background: linear-gradient(90deg, rgba(225, 16, 0, 0.06), transparent);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+}
+.defenders-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  background: linear-gradient(90deg, rgba(225, 16, 0, 0.06), transparent);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+}
+.keeper-bios .keeper-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 0.6rem;
+}
+.keeper-list li {
+  padding: 0.45rem;
+  border-radius: 6px;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.01),
+    rgba(0, 0, 0, 0.12)
+  );
+  border: 1px solid rgba(255, 255, 255, 0.02);
+}
+.keeper-list strong {
+  color: var(--red);
+}
+
+/* Make defender labels and names red as well */
+.defender-list strong {
+  color: var(--red);
+}
+
+/* Optional: slightly style scrollbars for the dark theme (WebKit browsers) */
+.player-bio.open::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+.player-bio.open::-webkit-scrollbar-thumb {
+  background: rgba(225, 16, 0, 0.45);
+  border-radius: 6px;
+}
+.player-bio.open::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.02);
 }
 
 .site-footer {

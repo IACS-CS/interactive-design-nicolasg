@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A simple choose your own adventure game."
+      content="Athletico Paranaense - A proud club from Curitiba playing in black and red."
     />
-    <title>My Choose-Your-Own Adventure!</title>
+    <title>Athletico Paranaense</title>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <base href="./" />
   </head>
@@ -16,8 +16,6 @@
       <div class="container header-inner">
         <div class="brand">
           <div class="crest" aria-hidden="true">
-            <!-- If you add or update the crest image, place it in the images/ folder.
-                 We include the provided LOGO.png below so it shows in the header. -->
             <img
               src="images/LOGO.png"
               alt="Athletico Paranaense crest"
@@ -29,6 +27,15 @@
             <p class="sub">Founded: 1924 — Curitiba, Brazil</p>
           </div>
         </div>
+        <li>
+          <strong>Leo Derik</strong>
+          <p>
+            <strong>Age:</strong> 20 — <strong>Nationality:</strong> Brazil —
+            <strong>Position(s):</strong> Centre-Back —
+            <strong>Contract:</strong> N/A
+          </p>
+          <p>Newly added to the defenders list.</p>
+        </li>
         <nav class="main-nav" aria-label="Main navigation">
           <a href="#about">About</a>
           <a href="#stadium">Stadium</a>
@@ -55,33 +62,230 @@
           <p>
             Athletico Paranaense (often called Athletico-PR) is a Brazilian club
             known for its passionate fans and distinctive red-and-black colors.
-            
           </p>
         </section>
 
         <section id="stadium" class="card">
           <h3>Stadium</h3>
           <p>
-            Home stadium: Arena da Baixada, located in Curitiba. Capacity of 42,372
+            Home stadium: Arena da Baixada, located in Curitiba. Capacity of
+            42,372
           </p>
         </section>
 
         <section id="squad" class="card">
-          <h3>Squad (example)</h3>
-          <p>Click a player to reveal a short bio.</p>
+          <h3>Squad</h3>
+          <p>Click a position to reveal player details.</p>
           <ul class="squad-list">
             <li>
-              <button class="player-btn">Player 1</button>
-              <div class="player-bio">Position: Defender — Add notes here.</div>
+              <!-- Single button to reveal all goalkeeper details -->
+              <button class="player-btn goalkeeper-btn">Goalkeepers</button>
+              <div class="player-bio keeper-bios">
+                <ul class="keeper-list">
+                  <li>
+                    <strong>Santos (João Paulo dos Reis Rocha)</strong>
+                    <p>
+                      <strong>Age:</strong> 35 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Contract:</strong> 2026
+                    </p>
+                    <p>
+                      Veteran first-choice keeper; 21 appearances in 2025 with
+                      51 saves and 20 goals conceded.
+                    </p>
+                  </li>
+
+                  <li>
+                    <strong>Mycael (Mycael Vinícius Gadelha da Pontes)</strong>
+                    <p>
+                      <strong>Age:</strong> 21 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Contract:</strong> 2027
+                    </p>
+                    <p>
+                      Emerging talent; 17 appearances in 2025 with 40 saves and
+                      23 goals conceded.
+                    </p>
+                  </li>
+
+                  <li>
+                    <strong>Matheus Soares (Matheus Soares Rocha)</strong>
+                    <p>
+                      <strong>Age:</strong> 20 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Contract:</strong> 2025
+                    </p>
+                    <p>Youth prospect; no senior appearances yet in 2025.</p>
+                  </li>
+
+                  <li>
+                    <strong>Maksym Voronov</strong>
+                    <p>
+                      <strong>Age:</strong> 19 —
+                      <strong>Nationality:</strong> Ukraine —
+                      <strong>Contract:</strong> N/A
+                    </p>
+                    <p>Recent signing; limited senior experience.</p>
+                  </li>
+
+                  <li>
+                    <strong>Lucas Macanhan</strong>
+                    <p>
+                      <strong>Age:</strong> 19 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Contract:</strong> N/A
+                    </p>
+                    <p>Academy product; no senior appearances in 2025.</p>
+                  </li>
+
+                  <li>
+                    <strong>Carlos Eduardo Souza de Barros</strong>
+                    <p>
+                      <strong>Age:</strong> 19 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Contract:</strong> N/A
+                    </p>
+                    <p>Backup option.</p>
+                  </li>
+                </ul>
+              </div>
             </li>
+
             <li>
-              <button class="player-btn">Player 2</button>
+              <!-- Single button to reveal all defender details -->
+              <button class="player-btn defenders-btn">Defenders</button>
+              <div class="player-bio defender-bios">
+                <ul class="defender-list">
+                  <li>
+                    <strong>Léo (Léo Pelé)</strong>
+                    <p>
+                      <strong>Age:</strong> 29 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Position(s):</strong> Centre-Back —
+                      <strong>Contract:</strong> 2028
+                    </p>
+                    <p>
+                      Regular starter; 27 appearances in 2025, 1 goal, 25
+                      interceptions.
+                    </p>
+                  </li>
+
+                  <li>
+                    <strong>Carlos Terán</strong>
+                    <p>
+                      <strong>Age:</strong> 25 —
+                      <strong>Nationality:</strong> Colombia —
+                      <strong>Position(s):</strong> Centre-Back —
+                      <strong>Contract:</strong> 2026
+                    </p>
+                    <p>
+                      Key import; 10 appearances, strong tackler but 2 red
+                      cards.
+                    </p>
+                  </li>
+
+                  <li>
+                    <strong>Lucas Belezi</strong>
+                    <p>
+                      <strong>Age:</strong> 22 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Position(s):</strong> Centre-Back —
+                      <strong>Contract:</strong> 2025
+                    </p>
+                    <p>
+                      Promising talent; 15 appearances, reliable in rotations.
+                    </p>
+                  </li>
+
+                  <li>
+                    <strong>Habraão</strong>
+                    <p>
+                      <strong>Age:</strong> 24 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Position(s):</strong> Centre-Back —
+                      <strong>Contract:</strong> 2028
+                    </p>
+                    <p>Recent signing; 14 appearances, aerial specialist.</p>
+                  </li>
+
+                  <li>
+                    <strong>Juan Felipe Aguirre</strong>
+                    <p>
+                      <strong>Age:</strong> 29 —
+                      <strong>Nationality:</strong> Colombia —
+                      <strong>Position(s):</strong> Centre-Back —
+                      <strong>Contract:</strong> 2027
+                    </p>
+                    <p>Veteran addition; 16 appearances, solid organizer.</p>
+                  </li>
+
+                  <li>
+                    <strong>Tobias Figueiredo</strong>
+                    <p>
+                      <strong>Age:</strong> 31 —
+                      <strong>Nationality:</strong> Portugal —
+                      <strong>Position(s):</strong> Centre-Back —
+                      <strong>Contract:</strong> 2025
+                    </p>
+                    <p>Experienced depth; 4 appearances, leadership role.</p>
+                  </li>
+
+                  <li>
+                    <strong>Lucas Esquivel</strong>
+                    <p>
+                      <strong>Age:</strong> 24 —
+                      <strong>Nationality:</strong> Argentina —
+                      <strong>Position(s):</strong> Left-Back —
+                      <strong>Contract:</strong> 2028
+                    </p>
+                    <p>Primary LB option; versatile attacker from the flank.</p>
+                  </li>
+
+                  <li>
+                    <strong>Fernando</strong>
+                    <p>
+                      <strong>Age:</strong> 27 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Position(s):</strong> Left-Back —
+                      <strong>Contract:</strong> 2026
+                    </p>
+                    <p>Squad regular; provides balance on the left.</p>
+                  </li>
+
+                  <li>
+                    <strong>Gastón Benavídez</strong>
+                    <p>
+                      <strong>Age:</strong> 30 —
+                      <strong>Nationality:</strong> Argentina —
+                      <strong>Position(s):</strong> Right-Back —
+                      <strong>Contract:</strong> 2025
+                    </p>
+                    <p>Attacking RB; consistent crosses and overlaps.</p>
+                  </li>
+
+                  <li>
+                    <strong>Madson</strong>
+                    <p>
+                      <strong>Age:</strong> 33 —
+                      <strong>Nationality:</strong> Brazil —
+                      <strong>Position(s):</strong> Right-Back —
+                      <strong>Contract:</strong> 2025
+                    </p>
+                    <p>Veteran backup; 2 appearances, mentor figure.</p>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li>
+              <button class="player-btn">Midfielders</button>
               <div class="player-bio">
                 Position: Midfielder — Add notes here.
               </div>
             </li>
+
             <li>
-              <button class="player-btn">Player 3</button>
+              <button class="player-btn">Attackers</button>
               <div class="player-bio">Position: Forward — Add notes here.</div>
             </li>
           </ul>

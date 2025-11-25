@@ -14,24 +14,35 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Add click handlers to each player button to show/hide the bio
-  // We use simple querySelectorAll and a for loop so students can read it easily
+  // We toggle an "open" class instead of swapping display:none so CSS can animate it
   var buttons = document.querySelectorAll(".player-btn");
-  for (var i = 0; i < buttons.length; i++) {
-    // For each button, add a click event listener
-    buttons[i].addEventListener("click", function (event) {
-      // The clicked button is event.currentTarget
-      var btn = event.currentTarget;
-      // The bio is the nextElementSibling in the DOM we added in HTML
-      var bio = btn.nextElementSibling;
-      if (!bio) return; // nothing to do if no bio found
+  var bios = document.querySelectorAll(".player-bio");
 
-      // Toggle bio visibility by changing its CSS display property
-      if (bio.style.display === "block") {
-        bio.style.display = "none";
-      } else {
-        bio.style.display = "block";
-      }
-    });
+  // Initialize ARIA attributes for accessibility
+  for (var i = 0; i < bios.length; i++) {
+    bios[i].setAttribute("aria-hidden", "true");
+  }
+
+  for (var j = 0; j < buttons.length; j++) {
+    var b = buttons[j];
+    b.setAttribute("aria-expanded", "false");
+    (function (btn) {
+      btn.addEventListener("click", function (event) {
+        var bio = btn.nextElementSibling;
+        if (!bio) return;
+
+        var isOpen = bio.classList.contains("open");
+        if (isOpen) {
+          bio.classList.remove("open");
+          bio.setAttribute("aria-hidden", "true");
+          btn.setAttribute("aria-expanded", "false");
+        } else {
+          bio.classList.add("open");
+          bio.setAttribute("aria-hidden", "false");
+          btn.setAttribute("aria-expanded", "true");
+        }
+      });
+    })(b);
   }
 });
 
