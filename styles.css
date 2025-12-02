@@ -195,7 +195,6 @@ body {
   -webkit-overflow-scrolling: touch; /* smoother scrolling on mobile */
 }
 
-/* Make the goalkeeper button more prominent and the combined bios look tidy */
 .goalkeeper-btn {
   display: block;
   width: 100%;
@@ -207,6 +206,26 @@ body {
   font-weight: 700;
 }
 .defenders-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  background: linear-gradient(90deg, rgba(225, 16, 0, 0.06), transparent);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+}
+.midfielders-btn {
+  display: block;
+  width: 100%;
+  text-align: left;
+  padding: 0.6rem 0.8rem;
+  background: linear-gradient(90deg, rgba(225, 16, 0, 0.06), transparent);
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  font-weight: 700;
+}
+.attackers-btn {
   display: block;
   width: 100%;
   text-align: left;
@@ -237,12 +256,71 @@ body {
   color: var(--red);
 }
 
-/* Make defender labels and names red as well */
 .defender-list strong {
   color: var(--red);
 }
 
-/* Optional: slightly style scrollbars for the dark theme (WebKit browsers) */
+.midfielder-list strong {
+  color: var(--red);
+}
+
+.attacker-list strong {
+  color: var(--red);
+}
+
+/* Latest match / scoreboard styles */
+.match-card .scoreboard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.5rem 0;
+}
+.match-card .team {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.score-crest {
+  width: 56px;
+  height: 56px;
+  object-fit: contain;
+  border-radius: 6px;
+  background: #000;
+  padding: 6px;
+}
+.team-name-small {
+  font-weight: 700;
+}
+.score {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--red);
+}
+.score .dash {
+  color: #fff;
+  opacity: 0.8;
+  padding: 0 0.4rem;
+}
+.match-card .small {
+  margin: 0.25rem 0 0;
+  color: var(--muted);
+}
+
+@media (max-width: 600px) {
+  .match-card .scoreboard {
+    flex-direction: column;
+    align-items: center;
+  }
+  .score {
+    font-size: 1.4rem;
+  }
+  .score-crest {
+    width: 48px;
+    height: 48px;
+  }
+}
+
 .player-bio.open::-webkit-scrollbar {
   height: 8px;
   width: 8px;
